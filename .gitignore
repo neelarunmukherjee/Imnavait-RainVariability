@@ -1,0 +1,23 @@
+# Simulation run output directories
+runs/
+
+# Raw/unprocessed inputs
+inputs_raw/
+
+# Scripts directory
+scripts/
+
+# Large data files (kept locally, not tracked)
+data/*.h5
+data/*.exo
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# OS/editor artifacts
+.DS_Store
+*.swp
+*.swo
