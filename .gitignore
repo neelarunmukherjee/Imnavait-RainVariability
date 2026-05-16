@@ -3,26 +3,27 @@ runs/
 
 # Raw/unprocessed inputs
 inputs_raw/
+inputs/
 
-# Scripts directory
-scripts/
+# Raw/archive copies
+data_raw/
+scripts_raw/
 
-# Large data files — exclude all by default, then allow the ones referenced by inputs/
+# Large data files — exclude all by default, then allow tracked files
 data/*.h5
 data/*.exo
 
-# --- files referenced by inputs/column_freezeup_imnavait.xml ---
+# --- column freezeup / spinup ---
 !data/mesh_column_imnavait.exo
 !data/column_data_freezeup.h5
 !data/forcing_smoothed4spinUp.h5
+!data/column_data_spinup_smoothedMet.h5
 
-# --- files referenced by inputs/column_spinup_imnavait_smoothedMet.xml ---
-# (mesh_column_imnavait.exo and forcing_smoothed4spinUp.h5 already allowed above)
-
-# --- files referenced by inputs/transect_imnavait_rainsigma_ensemble_TEMPLATE.xml ---
-!data/transect_imnavait_grace_v2.exo
-!data/column_data_spinup_2019_WERCmet_rainppt_1_5 snowppt_1_7.h5
+# --- transect mesh and ensemble forcings ---
+!data/mesh_transect_imnavait.exo
+!data/forcing_daac_ABoVE_snowmodel_1981_2020.h5
 !data/synthetic_rainfall_ensemble_6yr.h5
+!data/synthetic_rainfall_ensemble_9yr.h5
 !data/synthetic_rainfall_ensemble_4yr_new.h5
 !data/synthetic_rainfall_ensemble_sigma6_trials.h5
 
