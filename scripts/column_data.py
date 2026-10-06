@@ -39,7 +39,7 @@ if __name__ == "__main__":
     zc = vis.centroids[:,2]
     z_depth = options.z0 -  zc
 
-    with h5py.File("column_data_spinup_2019_WERCmet_rainppt_1_5 snowppt_1_7.h5", 'w') as fout:
+    with h5py.File("column_data.h5", "w") as fout:
         fout.create_dataset('z', data=np.flipud(z_depth))
         fout.create_dataset('pressure', data=np.flipud(pres[0,:]))
         if options.temperature:

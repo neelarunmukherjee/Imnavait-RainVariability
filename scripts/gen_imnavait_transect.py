@@ -125,6 +125,6 @@ m3 = meshing_ats.Mesh3D.extruded_Mesh2D(
     layer_mat_ids
 )
 
-output_file = "../transect_imnavait_grace_v2.exo"
+output_file = "../data/mesh_transect_imnavait.exo"
 m3.write_exodus(output_file)
 print(f"Mesh written to: {output_file}")

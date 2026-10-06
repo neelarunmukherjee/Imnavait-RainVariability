@@ -1,0 +1,119 @@
+,File_Name,File_Description,Standard,Start_Date,End_Date,Missing_Value_Codes,File_Path
+0,ImnavaitCr_Historical_Discharge_1985_2017_2018Aug6.csv,"Imnavait Creek weir discharge record (Kane et al., Arctic Data Center); used to define the mean summer window. Missing value code 6999.",N/A,24 May 1985,01 Oct 2017,6999,./data/
+1,column_data_freezeup.h5,Column pressure profile vs. depth from the column freeze-up run; initial condition for the column spinup.,N/A,-9999,-9999,N/A,./data/
+2,column_data_spinup_smoothedMet.h5,Column pressure profile vs. depth from the column spinup run; initial condition for all transect BASE runs.,N/A,-9999,-9999,N/A,./data/
+3,forcing_daac_ABoVE_snowmodel_1981_2020.h5,"Daily meteorological forcing at Imnavait Creek from the NASA DAAC ABoVE SnowModel dataset (Liston et al., 2023) in ATS format; source for the day-of-year mean forcing and the rain lognormal fit.",N/A,01 Jan 1981,31 Aug 2020,N/A,./data/
+4,forcing_smoothed4spinUp.h5,Smoothed single-year meteorological forcing (Savitzky-Golay filtered day-of-year mean) for the column spinup.,N/A,-9999,-9999,N/A,./data/
+5,mesh_column_imnavait.exo,"Model input file (computational mesh): 1D column, Exodus format.",N/A,-9999,-9999,N/A,./data/
+6,mesh_transect_imnavait.exo,"Model input file (computational mesh): 2D hillslope-riparian transect, Exodus format.",N/A,-9999,-9999,N/A,./data/
+7,synthetic_rainfall_ensemble_4yr_new.h5,ATS forcing with day-of-year mean meteorology and 4 years of synthetic summer rain with new random seeds for sigma_1-sigma_9; SEEDS runs.,N/A,-9999,-9999,N/A,./data/
+8,synthetic_rainfall_ensemble_6yr.h5,ATS forcing with day-of-year mean meteorology and 6 years of synthetic summer rain for sigma_1-sigma_9 (columns 'rain precipitation 0-8'); BASE runs.,N/A,-9999,-9999,N/A,./data/
+9,synthetic_rainfall_ensemble_9yr.h5,ATS forcing with day-of-year mean meteorology and 9 years of synthetic summer rain for sigma_1-sigma_9 (years 1-6 identical to the 6yr file); EXTRA runs use years 7-9.,N/A,-9999,-9999,N/A,./data/
+10,column_freezeup_imnavait.xml,Model configuration file (ATS input) for the column run.,N/A,-9999,-9999,N/A,./inputs/
+11,column_spinup_imnavait_smoothedMet.xml,Model configuration file (ATS input) for the column run.,N/A,-9999,-9999,N/A,./inputs/
+12,transect_base_sigma0_6yr.xml,"Model configuration file (ATS input) for the BASE transect run, sigma_1.",N/A,-9999,-9999,N/A,./inputs/
+13,transect_base_sigma1_6yr.xml,"Model configuration file (ATS input) for the BASE transect run, sigma_2.",N/A,-9999,-9999,N/A,./inputs/
+14,transect_base_sigma2_6yr.xml,"Model configuration file (ATS input) for the BASE transect run, sigma_3.",N/A,-9999,-9999,N/A,./inputs/
+15,transect_base_sigma3_6yr.xml,"Model configuration file (ATS input) for the BASE transect run, sigma_4.",N/A,-9999,-9999,N/A,./inputs/
+16,transect_base_sigma4_6yr.xml,"Model configuration file (ATS input) for the BASE transect run, sigma_5.",N/A,-9999,-9999,N/A,./inputs/
+17,transect_base_sigma5_6yr.xml,"Model configuration file (ATS input) for the BASE transect run, sigma_6.",N/A,-9999,-9999,N/A,./inputs/
+18,transect_base_sigma6_6yr.xml,"Model configuration file (ATS input) for the BASE transect run, sigma_7.",N/A,-9999,-9999,N/A,./inputs/
+19,transect_base_sigma7_6yr.xml,"Model configuration file (ATS input) for the BASE transect run, sigma_8.",N/A,-9999,-9999,N/A,./inputs/
+20,transect_base_sigma8_6yr.xml,"Model configuration file (ATS input) for the BASE transect run, sigma_9.",N/A,-9999,-9999,N/A,./inputs/
+21,transect_extra_sigma0_3yr.xml,"Model configuration file (ATS input) for the EXTRA transect run, sigma_1.",N/A,-9999,-9999,N/A,./inputs/
+22,transect_extra_sigma1_3yr.xml,"Model configuration file (ATS input) for the EXTRA transect run, sigma_2.",N/A,-9999,-9999,N/A,./inputs/
+23,transect_extra_sigma2_3yr.xml,"Model configuration file (ATS input) for the EXTRA transect run, sigma_3.",N/A,-9999,-9999,N/A,./inputs/
+24,transect_extra_sigma3_3yr.xml,"Model configuration file (ATS input) for the EXTRA transect run, sigma_4.",N/A,-9999,-9999,N/A,./inputs/
+25,transect_extra_sigma4_3yr.xml,"Model configuration file (ATS input) for the EXTRA transect run, sigma_5.",N/A,-9999,-9999,N/A,./inputs/
+26,transect_extra_sigma5_3yr.xml,"Model configuration file (ATS input) for the EXTRA transect run, sigma_6.",N/A,-9999,-9999,N/A,./inputs/
+27,transect_extra_sigma6_3yr.xml,"Model configuration file (ATS input) for the EXTRA transect run, sigma_7.",N/A,-9999,-9999,N/A,./inputs/
+28,transect_extra_sigma7_3yr.xml,"Model configuration file (ATS input) for the EXTRA transect run, sigma_8.",N/A,-9999,-9999,N/A,./inputs/
+29,transect_extra_sigma8_3yr.xml,"Model configuration file (ATS input) for the EXTRA transect run, sigma_9.",N/A,-9999,-9999,N/A,./inputs/
+30,transect_seeds_sigma0_4yr.xml,"Model configuration file (ATS input) for the SEEDS transect run, sigma_1.",N/A,-9999,-9999,N/A,./inputs/
+31,transect_seeds_sigma1_4yr.xml,"Model configuration file (ATS input) for the SEEDS transect run, sigma_2.",N/A,-9999,-9999,N/A,./inputs/
+32,transect_seeds_sigma2_4yr.xml,"Model configuration file (ATS input) for the SEEDS transect run, sigma_3.",N/A,-9999,-9999,N/A,./inputs/
+33,transect_seeds_sigma3_4yr.xml,"Model configuration file (ATS input) for the SEEDS transect run, sigma_4.",N/A,-9999,-9999,N/A,./inputs/
+34,transect_seeds_sigma4_4yr.xml,"Model configuration file (ATS input) for the SEEDS transect run, sigma_5.",N/A,-9999,-9999,N/A,./inputs/
+35,transect_seeds_sigma5_4yr.xml,"Model configuration file (ATS input) for the SEEDS transect run, sigma_6.",N/A,-9999,-9999,N/A,./inputs/
+36,transect_seeds_sigma6_4yr.xml,"Model configuration file (ATS input) for the SEEDS transect run, sigma_7.",N/A,-9999,-9999,N/A,./inputs/
+37,transect_seeds_sigma7_4yr.xml,"Model configuration file (ATS input) for the SEEDS transect run, sigma_8.",N/A,-9999,-9999,N/A,./inputs/
+38,transect_seeds_sigma8_4yr.xml,"Model configuration file (ATS input) for the SEEDS transect run, sigma_9.",N/A,-9999,-9999,N/A,./inputs/
+39,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run01_column_freezeup/
+40,column_data.h5,Column pressure profile vs. depth extracted from the freeze-up run (column_data.py).,N/A,-9999,-9999,N/A,./runs/run01_column_freezeup/
+41,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run02_column_spinup_smoothedmet/
+42,observation_columnSpinup.dat,Model output ASCII daily observation file for the column spinup run; see dd.csv.,N/A,-9999,-9999,N/A,./runs/run02_column_spinup_smoothedmet/
+43,ats_vis_data.h5,"Trimmed ATS subsurface visualization output (saturation, temperature, pressure, Darcy flux) at simulation days 1294-1296, sigma_1 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma0_6yr/
+44,ats_vis_mesh.h5,"ATS subsurface visualization mesh, sigma_1 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma0_6yr/
+45,ats_vis_surface_data.h5,"Trimmed ATS surface visualization output (elevation, ponded depth, rain) at simulation days 1294-1296, sigma_1 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma0_6yr/
+46,ats_vis_surface_mesh.h5,"ATS surface visualization mesh, sigma_1 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma0_6yr/
+47,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma0_6yr/
+48,observation_2D.dat,"Model output ASCII daily observation file for the BASE transect run, sigma_1 (6 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma0_6yr/
+49,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma1_6yr/
+50,observation_2D.dat,"Model output ASCII daily observation file for the BASE transect run, sigma_2 (6 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma1_6yr/
+51,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma2_6yr/
+52,observation_2D.dat,"Model output ASCII daily observation file for the BASE transect run, sigma_3 (6 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma2_6yr/
+53,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma3_6yr/
+54,observation_2D.dat,"Model output ASCII daily observation file for the BASE transect run, sigma_4 (6 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma3_6yr/
+55,ats_vis_data.h5,"Trimmed ATS subsurface visualization output (saturation, temperature, pressure, Darcy flux) at simulation days 1294-1296, sigma_5 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma4_6yr/
+56,ats_vis_mesh.h5,"ATS subsurface visualization mesh, sigma_5 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma4_6yr/
+57,ats_vis_surface_data.h5,"Trimmed ATS surface visualization output (elevation, ponded depth, rain) at simulation days 1294-1296, sigma_5 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma4_6yr/
+58,ats_vis_surface_mesh.h5,"ATS surface visualization mesh, sigma_5 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma4_6yr/
+59,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma4_6yr/
+60,observation_2D.dat,"Model output ASCII daily observation file for the BASE transect run, sigma_5 (6 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma4_6yr/
+61,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma5_6yr/
+62,observation_2D.dat,"Model output ASCII daily observation file for the BASE transect run, sigma_6 (6 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma5_6yr/
+63,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma6_6yr/
+64,observation_2D.dat,"Model output ASCII daily observation file for the BASE transect run, sigma_7 (6 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma6_6yr/
+65,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma7_6yr/
+66,observation_2D.dat,"Model output ASCII daily observation file for the BASE transect run, sigma_8 (6 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma7_6yr/
+67,ats_vis_data.h5,"Trimmed ATS subsurface visualization output (saturation, temperature, pressure, Darcy flux) at simulation days 1294-1296, sigma_9 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma8_6yr/
+68,ats_vis_mesh.h5,"ATS subsurface visualization mesh, sigma_9 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma8_6yr/
+69,ats_vis_surface_data.h5,"Trimmed ATS surface visualization output (elevation, ponded depth, rain) at simulation days 1294-1296, sigma_9 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma8_6yr/
+70,ats_vis_surface_mesh.h5,"ATS surface visualization mesh, sigma_9 BASE run (Figures 3-4).",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma8_6yr/
+71,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma8_6yr/
+72,observation_2D.dat,"Model output ASCII daily observation file for the BASE transect run, sigma_9 (6 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run03_transect_base_sigma8_6yr/
+73,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma0_3yr/
+74,observation_2D.dat,"Model output ASCII daily observation file for the EXTRA transect run, sigma_1 (3 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma0_3yr/
+75,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma1_3yr/
+76,observation_2D.dat,"Model output ASCII daily observation file for the EXTRA transect run, sigma_2 (3 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma1_3yr/
+77,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma2_3yr/
+78,observation_2D.dat,"Model output ASCII daily observation file for the EXTRA transect run, sigma_3 (3 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma2_3yr/
+79,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma3_3yr/
+80,observation_2D.dat,"Model output ASCII daily observation file for the EXTRA transect run, sigma_4 (3 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma3_3yr/
+81,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma4_3yr/
+82,observation_2D.dat,"Model output ASCII daily observation file for the EXTRA transect run, sigma_5 (3 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma4_3yr/
+83,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma5_3yr/
+84,observation_2D.dat,"Model output ASCII daily observation file for the EXTRA transect run, sigma_6 (3 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma5_3yr/
+85,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma6_3yr/
+86,observation_2D.dat,"Model output ASCII daily observation file for the EXTRA transect run, sigma_7 (3 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma6_3yr/
+87,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma7_3yr/
+88,observation_2D.dat,"Model output ASCII daily observation file for the EXTRA transect run, sigma_8 (3 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma7_3yr/
+89,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma8_3yr/
+90,observation_2D.dat,"Model output ASCII daily observation file for the EXTRA transect run, sigma_9 (3 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run04_transect_extra_sigma8_3yr/
+91,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma0_4yr/
+92,observation_2D.dat,"Model output ASCII daily observation file for the SEEDS transect run, sigma_1 (4 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma0_4yr/
+93,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma1_4yr/
+94,observation_2D.dat,"Model output ASCII daily observation file for the SEEDS transect run, sigma_2 (4 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma1_4yr/
+95,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma2_4yr/
+96,observation_2D.dat,"Model output ASCII daily observation file for the SEEDS transect run, sigma_3 (4 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma2_4yr/
+97,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma3_4yr/
+98,observation_2D.dat,"Model output ASCII daily observation file for the SEEDS transect run, sigma_4 (4 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma3_4yr/
+99,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma4_4yr/
+100,observation_2D.dat,"Model output ASCII daily observation file for the SEEDS transect run, sigma_5 (4 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma4_4yr/
+101,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma5_4yr/
+102,observation_2D.dat,"Model output ASCII daily observation file for the SEEDS transect run, sigma_6 (4 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma5_4yr/
+103,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma6_4yr/
+104,observation_2D.dat,"Model output ASCII daily observation file for the SEEDS transect run, sigma_7 (4 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma6_4yr/
+105,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma7_4yr/
+106,observation_2D.dat,"Model output ASCII daily observation file for the SEEDS transect run, sigma_8 (4 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma7_4yr/
+107,checkpoint_final.h5,Model output binary file as a checkpoint (end of run).,N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma8_4yr/
+108,observation_2D.dat,"Model output ASCII daily observation file for the SEEDS transect run, sigma_9 (4 yr); see dd.csv.",N/A,-9999,-9999,N/A,./runs/run05_transect_seeds_sigma8_4yr/
+109,ICVar_Figures.ipynb,Jupyter notebook that regenerates the data panels of main-text Figures 1-8 from this package.,N/A,-9999,-9999,N/A,./scripts/
+110,column_data.py,Python script to extract a sorted pressure/temperature vs. depth profile (column_data.h5) from a finished ATS column run.,N/A,-9999,-9999,N/A,./scripts/
+111,gen_column_imnavait.py,Python script to generate the ATS column mesh for Imnavait.,N/A,-9999,-9999,N/A,./scripts/
+112,gen_ensemble_rain_forcings.py,Python script to generate the synthetic rain ensemble forcing files from the DAAC forcing and the weir discharge record.,N/A,-9999,-9999,N/A,./scripts/
+113,gen_imnavait_transect.py,Python script to generate the ATS transect mesh for Imnavait.,N/A,-9999,-9999,N/A,./scripts/
+114,smooth_met.py,Python script to smooth meteorological forcing data for model spinup.,N/A,-9999,-9999,N/A,./scripts/
+115,trim_vis_output.py,Python script to extract selected variables and output frames from full ATS visualization output.,N/A,-9999,-9999,N/A,./scripts/
+116,README.md,"Description of the data package, simulation workflow and file organisation.",N/A,-9999,-9999,N/A,./
+117,dd.csv,Data dictionary for tabular files in this package.,N/A,-9999,-9999,N/A,./

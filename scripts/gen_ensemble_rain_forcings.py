@@ -6,13 +6,12 @@ Generate synthetic ensemble rainfall forcing files for ATS transect simulations.
 Reproduces the logic from three notebooks:
   - make_forcings_vcariability_DAAC_final_emsemble_rain_0.ipynb  -> 6yr ensemble
   - make_forcings_vcariability_DAAC_final_emsemble_rain.ipynb    -> 9yr ensemble
-  - make_forcings_vcariability_DAAC_final_emsemble_rain_seeds.ipynb -> 4yr_new + sigma6_trials
+  - make_forcings_vcariability_DAAC_final_emsemble_rain_seeds.ipynb -> 4yr_new
 
 Outputs (written to OUTPUT_DIR):
   - synthetic_rainfall_ensemble_6yr.h5         (9 sigmas x 6 reps, a-f)
   - synthetic_rainfall_ensemble_9yr.h5         (9 sigmas x 9 reps, a-i)
   - synthetic_rainfall_ensemble_4yr_new.h5     (9 sigmas x 4 reps, j-m)
-  - synthetic_rainfall_ensemble_sigma6_trials.h5  (1-yr, sigma6, 6 shuffles, cols 61-66)
 
 Usage:
   python gen_ensemble_rain_forcings.py
@@ -37,9 +36,9 @@ from scipy.optimize import curve_fit
 # ── Paths ────────────────────────────────────────────────────────────────────
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(SCRIPT_DIR, "../../data")
+DATA_DIR = os.path.join(SCRIPT_DIR, "../data")
 
-FORCING_FILE = os.path.join(DATA_DIR, "daac_ABoVE_snowmodel_data_1980_2020.h5")
+FORCING_FILE = os.path.join(DATA_DIR, "forcing_daac_ABoVE_snowmodel_1981_2020.h5")
 DISCHARGE_CSV = os.path.join(DATA_DIR, "ImnavaitCr_Historical_Discharge_1985_2017_2018Aug6.csv")
 
 
@@ -312,47 +311,6 @@ def main(output_dir):
             fid.create_dataset(key, data=np.array(val, dtype=np.float32))
     print(f"  -> {out_path}  ({len(case_ensemble_4yr)} timesteps)")
 
-    # ── 12. Write sigma6_trials ensemble ────────────────────────────────────
-    # sigma index 6 corresponds to all_sigmas[6] = s + 0.7
-    # sig6j is the base series; shuffles 2-6 are random permutations of it.
-    # Note: shuffles are not seeded here; re-running produces different shuffle
-    # orderings while preserving the same rainfall amounts (same values, reordered).
-    print("Writing synthetic_rainfall_ensemble_sigma6_trials.h5 ...")
-    df_sigma6_test = df_synthetic_precip_new["sig6j"].copy()
-    df_sigma6_test.index = range(start_doy, start_doy + days)
-
-    np.random.seed(42)  # seed for reproducible shuffles (not in original notebook)
-    sigma6_shuffles = [df_sigma6_test.copy()]  # shuffle 1 = unmodified sig6j
-    for _ in range(5):
-        shuffled = df_sigma6_test.copy()
-        shuffled.values[:] = np.random.permutation(shuffled.values)
-        sigma6_shuffles.append(shuffled)
-
-    # Build 1-year per-shuffle case frames (columns 61-66)
-    case_sig6 = {}
-    for i, shuf in enumerate(sigma6_shuffles, start=1):
-        col_label = 61 + i - 1  # 61, 62, 63, 64, 65, 66
-        col_name = f"rain precipitation {col_label} [m/s]"
-        tmp = pd.Series(0.0, index=np.arange(0, 365))
-        tmp.loc[start_doy:end_doy] = (shuf.values * CONVERSION_FACTOR)
-        case_sig6[col_label] = tmp
-
-    dout_sigma6 = {}
-    dout_sigma6["time [s]"] = np.arange(0, 365) * 86400
-    dout_sigma6["air temperature [K]"] = caseA_df["air temperature [K]"].astype(np.float32)
-    dout_sigma6["incoming shortwave radiation [W m^-2]"] = caseA_df["incoming shortwave radiation [W m^-2]"].astype(np.float32)
-    dout_sigma6["vapor pressure air [Pa]"] = caseA_df["vapor pressure air [Pa]"].astype(np.float32)
-    dout_sigma6["wind speed [m s^-1]"] = caseA_df["wind speed [m/s]"].astype(np.float32)
-    dout_sigma6["snow precipitation [m SWE s^-1]"] = caseA_df["snow precipitation [m SWE/s]"].astype(np.float32)
-    for col_label, series in case_sig6.items():
-        dout_sigma6[f"rain precipitation {col_label} [m s^-1]"] = series.astype(np.float32)
-
-    out_path = os.path.join(output_dir, "synthetic_rainfall_ensemble_sigma6_trials.h5")
-    with h5py.File(out_path, "w") as fid:
-        for key, val in dout_sigma6.items():
-            fid.create_dataset(key, data=np.array(val, dtype=np.float32))
-    print(f"  -> {out_path}  (365 timesteps, rain cols 61-66)")
-
     print("\nDone. All ensemble forcing files written.")
 
 
@@ -360,8 +318,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument(
         "--output-dir",
-        default=os.path.join(SCRIPT_DIR, "../../data"),
-        help="Directory to write output HDF5 files (default: ../../data relative to script)",
+        default=DATA_DIR,
+        help="Directory to write output HDF5 files (default: ../data relative to script)",
     )
     args = parser.parse_args()
     main(os.path.abspath(args.output_dir))

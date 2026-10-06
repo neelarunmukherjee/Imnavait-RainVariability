@@ -1,0 +1,33 @@
+Column_or_Row_Name,Unit,Definition,Data_Type,Term_Type
+time [d],d,"Simulation time. observation_2D.dat: days since simulation start (BASE runs start at day 1; EXTRA runs continue from day 2190; SEEDS runs restart at day 0). observation_columnSpinup.dat: days since spinup start.",numeric,column_header
+water content [mol],mol,Total liquid + ice water content integrated over the subsurface domain (ATS variable water_content; extensive integral).,numeric,column_header
+surface water content [mol],mol,Ponded surface water content integrated over the surface domain (ATS variable surface-water_content; extensive integral).,numeric,column_header
+snow water content [mol],mol,Snowpack water content integrated over the surface domain (ATS variable snow-water_content; extensive integral).,numeric,column_header
+snow depth [m],m,Snow depth averaged over the surface domain (ATS variable snow-depth).,numeric,column_header
+snow density [kg/m^3],kg m-3,Snow density averaged over the surface domain (ATS variable snow-density).,numeric,column_header
+evaporation rate [m/d],m d-1,Surface evaporative flux averaged over the surface domain (ATS variable surface-evaporative_flux); negative values indicate condensation.,numeric,column_header
+evaporation cumulation [m3/d],m3 d-1,Surface evaporative flux integrated over the surface domain area (ATS variable surface-evaporative_flux; integral). Summing daily values gives total evaporated volume.,numeric,column_header
+subsurface evaporation cumulation [m3/d],m3 d-1,Evaporation drawn from the subsurface integrated over the surface domain area (ATS variable surface-subsurface_evaporative_flux; integral).,numeric,column_header
+discharge cumulation [mol/d],mol d-1,Surface water flux leaving the domain through the surface outlet region (ATS variable surface-water_flux; extensive integral over region 'surface outlet').,numeric,column_header
+surface-subsurface exchange cumulation [mol/d],mol d-1,Water exchange flux between surface and subsurface integrated over the surface domain (ATS variable surface-surface_subsurface_flux); negative = flow from the surface into the subsurface (infiltration). Divide by 55500 mol m-3 to convert to m3 d-1.,numeric,column_header
+snowmelt rate [m/d],m d-1,Snowmelt rate averaged over the surface domain (ATS variable snow-melt).,numeric,column_header
+snowmelt cumulation [m3/d],m3 d-1,Snowmelt rate integrated over the surface domain area (ATS variable snow-melt; integral).,numeric,column_header
+rain [m/d],m d-1,Rainfall rate averaged over the surface domain (ATS variable surface-precipitation_rain); equals the synthetic rainfall forcing column for the run's sigma level.,numeric,column_header
+rain cumulation [m3/d],m3 d-1,Rainfall rate integrated over the surface domain area (ATS variable surface-precipitation_rain; integral).,numeric,column_header
+snow [mSWE/d],m SWE d-1,Snowfall rate (snow water equivalent) averaged over the surface domain (ATS variable snow-precipitation).,numeric,column_header
+snow cumulation [m3SWE/d],m3 SWE d-1,Snowfall rate integrated over the surface domain area (ATS variable snow-precipitation; integral).,numeric,column_header
+surface temperature [K],K,Ground surface temperature averaged over the surface domain (ATS variable surface-temperature).,numeric,column_header
+air temperature [K],K,Air temperature forcing averaged over the surface domain (ATS variable surface-air_temperature).,numeric,column_header
+thaw depth [m],m,Depth from the ground surface to the top of frozen ground averaged over the surface domain (ATS variable surface-thaw_depth).,numeric,column_header
+water table depth [m],m,Depth from the ground surface to the water table averaged over the surface domain (ATS variable surface-water_table).,numeric,column_header
+net runoff [mol/d],mol d-1,Net surface water flux through the surface outlet region (ATS variable surface-water_flux; extensive integral). This is the hillslope runoff analysed in the manuscript. Divide by 55500 mol m-3 to convert to m3 d-1.,numeric,column_header
+molar density liquid [mol m^-3],mol m-3,Molar density of liquid surface water averaged over the surface domain (ATS variable surface-molar_density_liquid).,numeric,column_header
+surface area [m^2],m2,Total area of the surface domain (ATS variable surface-cell_volume; extensive integral).,numeric,column_header
+evaporation [m s^-1],m s-1,(observation_columnSpinup.dat) Surface evaporative flux averaged over the surface domain (ATS variable surface-evaporative_flux).,numeric,column_header
+surface-subsurface flux [mol s^-1],mol s-1,(observation_columnSpinup.dat) Surface-subsurface water exchange flux averaged over the surface domain (ATS variable surface-surface_subsurface_flux).,numeric,column_header
+precipitation rain [m s^-1],m s-1,(observation_columnSpinup.dat) Rainfall rate averaged over the surface domain (ATS variable surface-precipitation_rain).,numeric,column_header
+precipitation snow [m s^-1],m s-1,(observation_columnSpinup.dat) Snowfall rate (snow water equivalent) averaged over the surface domain (ATS variable snow-precipitation).,numeric,column_header
+snow melt [m s^-1],m s-1,(observation_columnSpinup.dat) Snowmelt rate averaged over the surface domain (ATS variable snow-melt).,numeric,column_header
+Station,N/A,(ImnavaitCr_Historical_Discharge_1985_2017_2018Aug6.csv) Gauging station name (Imnavait_Creek_Weir).,text,column_header
+Date,N/A,(ImnavaitCr_Historical_Discharge_1985_2017_2018Aug6.csv) Date and time of discharge measurement (YYYY-MM-DD H:MM).,date,column_header
+Discharge,m3 s-1,(ImnavaitCr_Historical_Discharge_1985_2017_2018Aug6.csv) Measured stream discharge at the Imnavait Creek weir; 6999 = missing value.,numeric,column_header

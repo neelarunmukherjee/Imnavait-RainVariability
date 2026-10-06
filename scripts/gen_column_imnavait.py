@@ -147,7 +147,7 @@ m3 = meshing_ats.Mesh3D.extruded_Mesh2D(
 
 # Uncomment to save the mesh file
 
-m3.write_exodus("column_imnavait_grace_v2.exo")
-print("Exodus mesh written to: column_imnavait_grace_v2.exo")
+m3.write_exodus("../data/mesh_column_imnavait.exo")
+print("Exodus mesh written to: ../data/mesh_column_imnavait.exo")
 print(f"\nTotal number of vertical cells: {cell_widths.shape[0]}")
 print("Vertical grid saved to: cell_widths_v2.npy")
